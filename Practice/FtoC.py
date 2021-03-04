@@ -10,6 +10,8 @@
 #     print(ConvertC + "°F")
 #ask for the number they want to convert
 
+#^first try
+
 inp1 = input("Are you converting Fahrenheit (F) or Celcius (C): ")
 inp2 = input("Please enter degrees: ")
 
