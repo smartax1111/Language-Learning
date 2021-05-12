@@ -51,7 +51,6 @@ ball.goto(0, 0)
 ball.dx = .2
 ball.dy = .2
 
-
 # Function
 def paddle_a_up():
     y = paddle_a.ycor()
@@ -62,7 +61,6 @@ def paddle_a_down():
     y = paddle_a.ycor()
     y -= 20
     paddle_a.sety(y)
-
 
 def paddle_b_up():
     y = paddle_b.ycor()

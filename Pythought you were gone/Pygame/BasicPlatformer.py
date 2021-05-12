@@ -15,7 +15,7 @@ Character.color("#013220")
 Character.shapesize()
 Character.penup()
 Character.goto(-350, 0)
-Character.dy = -1
+Character.dy = -1.5
 
 #Platform
 Platform  = turtle.Turtle()
@@ -40,9 +40,18 @@ def move_right():
 def jump():
     y = Character.ycor()
     if y == 0:
-        for y in range(80):
-            y += 20
-            Character.sety(y)
+        y += 10
+        Character.sety(y)
+        y += 10
+        Character.sety(y)
+        y += 10
+        Character.sety(y)
+        y += 10
+        Character.sety(y)
+        y += 10
+        Character.sety(y)
+        y += 10
+        Character.sety(y)
 
 # Keyboard Binding
 wn.listen()
