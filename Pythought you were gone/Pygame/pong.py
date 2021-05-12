@@ -1,7 +1,7 @@
 # Used to learn python
 
 import turtle
-import os
+import winsound
 
 win = turtle.Screen()
 win.title("Pong by TJ")
@@ -93,10 +93,12 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
+        winsound.PlaySound('C:/Users/TJ/Desktop/Ball_Bounce.wav', winsound.SND_FILENAME | winsound.SND_ASYNC)
 
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
+        winsound.PlaySound('C:/Users/TJ/Desktop/Ball_Bounce.wav', winsound.SND_FILENAME | winsound.SND_ASYNC)
 
     if ball.xcor() > 390:
         ball.goto(0, 0)
@@ -116,8 +118,10 @@ while True:
     if ball.xcor() > 350 and ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() - 50:
         ball.setx(340)
         ball.dx *= -1
+        winsound.PlaySound('C:/Users/TJ/Desktop/Ball_Bounce.wav', winsound.SND_FILENAME | winsound.SND_ASYNC)
 
     elif ball.xcor() < -350 and ball.ycor() < paddle_a.ycor() + 50 and ball.ycor() > paddle_a.ycor() - 50:
         ball.setx(-340)
         ball.dx *= -1
+        winsound.PlaySound('C:/Users/TJ/Desktop/Ball_Bounce.wav', winsound.SND_FILENAME | winsound.SND_ASYNC)
 
