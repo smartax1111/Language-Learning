@@ -1,3 +1,5 @@
+# Used to learn python
+
 import turtle
 import os
 
