@@ -48,7 +48,7 @@ def move_right():
 
 def jump():
     y = Character.ycor()
-    if y == 0:
+    if y == 0 or (Character.ycor() <= Platform2.ycor() + 60 and Character.xcor() > -210):
         y += 10
         Character.sety(y)
         y += 10
@@ -79,8 +79,10 @@ while True:
     wn.update()
 
     # Gravity
-    if Character.ycor() > 0:
-        Character.sety(Character.ycor()+ Character.dy)
+    while Character.ycor() > 0 and Character.xcor() < -210:
+        Character.sety(Character.ycor() + Character.dy)
+    while Character.ycor() > 60 and Character.xcor() >= -210:
+        Character.sety(Character.ycor() + Character.dy)
 
     #Platform Checking
     if Character.ycor() <= Platform1.ycor() + 199:
